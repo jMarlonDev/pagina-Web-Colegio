@@ -148,6 +148,8 @@ a {
 }
 
 .navegacion__menu a:hover:after {
+,
+a.active:after{
     width: 100%;
 }
 
