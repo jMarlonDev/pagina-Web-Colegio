@@ -20,7 +20,7 @@ document.querySelectorAll(".imagen-contenido img").forEach(imagen=>{
         document.querySelector(".imagen-click").style.display = "block";
         document.querySelector(".imagen-click img").src = imagen.getAttribute("src");
     }
-});
+}); 
 
 document.querySelector(".imagen-click").onclick = () =>{
     document.querySelector(".imagen-click").style.display = "none";
