@@ -717,10 +717,14 @@ background-color: var(--enfasis);
     .historia{
         padding: 2rem;
         color: var(--blanco); 
+        font-family: var(--fuenteContenido);
+        font-size: 1.6rem;
+        border-radius: 1rem;
     }
 
     .leer-mas{
         display: block;
+        font-size: 1.6rem;
     }
     .fecha{
         display: flex;
@@ -730,13 +734,24 @@ background-color: var(--enfasis);
         background:#222;
         font-family: var(--fuenteContenido);
         color: var(--blanco);
-        font-size: 1.5rem;
-
+        font-size: 1.4rem;
     }
+
+    .fecha2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.3rem;
+        font-family: var(--fuenteContenido);
+        background:#222;
+        color: var(--blanco);
+        font-size: 1.5rem;
+    }
+
     .contenedor {
         width: 90%;
         max-width: 120rem;
-        margin: 10rem auto;
+        margin: 10rem 7rem;
         display: flex;
         flex-direction: column;
         position: relative;
@@ -744,7 +759,7 @@ background-color: var(--enfasis);
     
     .contenedor::after {
         content: "";
-        width: 1rem;
+        width: .5rem;
         height: 100%;
         background:var(--verdeClaro) ;
         position: absolute;
@@ -757,7 +772,7 @@ background-color: var(--enfasis);
         display: flex;
         margin-right: 1rem;
         justify-content: space-between;
-        margin-bottom: 20rem;
+        margin-bottom: 5rem;
         position: relative;
     }
     
@@ -800,12 +815,13 @@ background-color: var(--enfasis);
     }
      */
     .foto {
-        background: #222;
-        width: 30%;
-        border: 1.1rem solid #fff;
-        border-radius: 1rem;
+        background:var(--verdeClaro);
+        width: 33%;
+        border: 1rem solid #fff;
+        border-radius: 1.5rem;
         position: relative;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        margin-right: 2rem;
     }
     
     .foto::after {
@@ -820,8 +836,7 @@ background-color: var(--enfasis);
     
     .foto img {
         width: 100%;
-        vertical-align: top;
-        border-radius: 1rem;
+        vertical-align: top; 
     }
     
     .evento:nth-child(even) {
@@ -843,10 +858,45 @@ background-color: var(--enfasis);
 
 
 @media (max-width:768px){
+    .historia{
+        padding: 3rem;
+        color: var(--blanco); 
+        font-family: var(--fuenteContenido);
+    }
+
+    .foto{
+        background:var(--verdeClaro);
+    }
+
+    .leer-mas{
+        display: block;
+    }
+    .fecha{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.4rem;
+        background:#222;
+        color: var(--blanco);
+        font-size: 2rem;
+        font-family: var(--fuenteContenido);
+    }
+
+    .fecha2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.3rem;
+        font-family: var(--fuenteContenido);
+        color: var(--blanco);
+        font-size: 2rem;
+        background:#222;
+    }
+
     .contenedor {
-        width: 90%;
+        width: 100%;
         max-width: 120rem;
-        margin: 10rem auto;
+        margin: 10rem 3rem;
         display: flex;
         flex-direction: column;
         position: relative;
@@ -867,7 +917,7 @@ background-color: var(--enfasis);
         display: flex;
         margin-right: 4rem;
         justify-content: space-between;
-        margin-bottom: 20rem;
+        margin-bottom: 15rem;
         position: relative;
     }
 /*     
@@ -883,7 +933,7 @@ background-color: var(--enfasis);
         z-index: 2;
         top: calc(50% - 14px);
         left: calc(50% - 13px);
-    } */
+    }
     
     /* .evento i{
         content: "";
@@ -910,15 +960,16 @@ background-color: var(--enfasis);
     } */
     
     .foto {
-        width: 90%;
+        width: 100%;
         border: 1rem solid #fff;
         border-radius: 1rem;
         position: relative;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        margin-right: -4rem;
+        margin-left: -1rem;
+
     }
     
-    .foto::after {
+    /* .foto::after {
         content: "";
         display: block;
         border: 2rem solid transparent;
@@ -927,27 +978,27 @@ background-color: var(--enfasis);
         right: -5rem;
         top: calc(50% - 2rem);
 
-    }
+    } */
     
     .foto img {
         width: 100%;
         vertical-align: top;
     }
-    
+/*     
     .evento:nth-child(even) {
         flex-direction: row-reverse;
-    }
+    } */
     
     /* .evento:nth-child(even) .fecha {
         justify-content: end;
     } */
     
-    .evento:nth-child(even) .foto::after {
+    /* .evento:nth-child(even) .foto::after {
         content: "";
         border: 2rem solid transparent;
         border-right: 2rem solid #fff;
         right: initial;
         left: -5rem;
-    }
+    } */
 
 }
