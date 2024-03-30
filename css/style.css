@@ -504,7 +504,7 @@ background-color: var(--enfasis);
     font-family: var(--fuenteContenido);
 }
 
-@media(max-width:768px){
+@media screen and (max-width:550px){
     .sociales-footer {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -649,7 +649,7 @@ background-color: var(--enfasis);
     height: 18rem;
 }
 
-@media (max-width:768px){
+@media screen and (max-width:550px){
     .grid{
         display: flex;
         flex-direction: column;
@@ -713,7 +713,7 @@ background-color: var(--enfasis);
 	text-transform: uppercase;
 }
 
-@media (min-width:768px){
+@media screen and (min-width:550px){
     .historia{
         padding: 2rem;
         color: var(--blanco); 
