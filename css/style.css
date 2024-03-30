@@ -21,7 +21,7 @@ margin: 5rem;
 border: 1px solid black;
 border-radius: 1.1rem;
 box-shadow: 1px 1px 30px black; 
-width: 90%;
+width: 95%;
 }
 
 *,
@@ -76,8 +76,8 @@ a {
 }
 
 .contenedor {
-    /* margin: auto; */
-    width: 100%;
+    margin: auto;
+    width: 90%;
     max-width: 120rem;
 }
 
