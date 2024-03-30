@@ -1,0 +1,47 @@
+        <div class="grid">
+
+        <div class="contenido-principal">
+            <div class="contenido-imagen">
+            <h3 class="titulo">MISIÓN</h3>
+
+                <img src="imagenes/logo-dark.jpg" alt="" class="imagen">
+            </div>
+
+            <div class="texto-contenido">
+                <p class="texto">
+                    La Institución Educativa General Santander, de sevilla, en el año
+                    2025 sera reconocida a nivel regional por su liderazgo en la formación de una comunidad educativa
+                    respetuosa del medio ambiente, los derechos humanos, la diversidad, la identidad cultural
+                    y la apropiación del paisaje cultural cafetero como elemento fortalecedor del desarrollo sostenible.
+                </p>
+            </div>
+        </div>
+        <div class="contenido-principal">
+            <div class="contenido-imagen">
+                <img src="imagenes/logo-dark.jpg" alt="" class="imagen">
+            </div>
+
+            <div class="texto-contenido">
+                <p class="texto">
+                    Somos una institución educativa oficial formadora de cuidadanos respetuosos de los derechos humanos,
+                    la paz, la democracia, la diversidad, la protección del medio ambiente; promotores de la identidad
+                    cultural y el sentido de
+                    pertenencia, a través de prácticas pedagógicas que trasnsforman realidades sociales.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="contenido-principal">
+        <div class="contenido-imagen">
+            <img src="imagenes/logo-dark.jpg" alt="" class="imagen">
+        </div>
+
+        <div class="texto-contenido">
+            <p class="texto">
+                Somos una institución educativa oficial formadora de cuidadanos respetuosos de los derechos humanos,
+                la paz, la democracia, la diversidad, la protección del medio ambiente; promotores de la identidad
+                cultural y el sentido de
+                pertenencia, a través de prácticas pedagógicas que trasnsforman realidades sociales.
+            </p>
+        </div>
+    </div>
