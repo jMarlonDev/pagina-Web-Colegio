@@ -7,10 +7,18 @@ const cerrar = document.querySelector("#cerrar");
 
 abrir.addEventListener("click", () => {
     navegacion.classList.add("visible");
+    document.querySelector('main').style.display = "none";
+    // document.querySelector('footer').style.display = "none";
+
+
 });
 
 cerrar.addEventListener("click", ()=>{
     navegacion.classList.remove("visible")
+    document.querySelector('main').style.display = "block";
+    // document.querySelector('footer').style.display = "block";
+
+
 });
 
 // agregando click de las fotos de la galeria de inicio

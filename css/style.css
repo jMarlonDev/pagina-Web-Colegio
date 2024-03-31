@@ -21,7 +21,7 @@ margin: 5rem;
 border: 1px solid black;
 border-radius: 1.1rem;
 box-shadow: 1px 1px 30px black; 
-width: 95%;
+width: 90%;
 }
 
 *,
@@ -34,16 +34,17 @@ width: 95%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background:#2d2d2d; */
 }
 
 
 html {
     font-size: 62.5%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(5,71,42,1) 0%, rgba(181,191,161,1) 50%, rgba(5,71,42,1) 100%);
 
@@ -60,9 +61,6 @@ h1 {
     font-weight: 200;
 }
 
-/* img{
-    width: 100%;
-} */
 
 /* aquí se esta hizo el estilo para hacer el efecto del menu de navegacion*/
 a {
@@ -111,6 +109,7 @@ a {
     background-position: center center;
     justify-content: space-between;
     height: 44rem;
+    
 }
 
 .bold {
@@ -128,7 +127,6 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* font-size: 1rem; */
 }
 
 .encabezado-main > .titulos > h1 {
@@ -236,7 +234,7 @@ a.active:after{
     .cerrar-menu {
         color: var(--blanco);
         display: block;
-        margin-right: -.1rem;
+        margin-left: 30rem;
         border: none;
         background: none;
         font-size: 3rem;
@@ -245,19 +243,18 @@ a.active:after{
     .navegacion {
         opacity: 0;
         visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        /* gap: 1rem; */
+        /* display: grid;
+        grid-template-columns: repeat(2,1fr); */
+        gap: 1rem;
         position: absolute;
         top: 0;
         right: 0;
-        background: #fafafa10;
+        background: #00000079;
         backdrop-filter: blur(0.5rem);
         -webkit-backdrop-filter: blur(0.5rem);
         padding: 2rem;
         bottom: 0;
-        width: 100%; 
+        width: 100%;
 }
 
     .navegacion.visible {
@@ -266,9 +263,11 @@ a.active:after{
     }
 
     .navegacion__menu {
-        flex-direction: column;
-        gap: 3rem;
-        margin-right: 10rem;
+        /* flex-direction: column; */
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 3rem;
+        gap: 6rem;
         justify-content: center;
         align-items: center;
         font-size: 3rem;
@@ -276,6 +275,8 @@ a.active:after{
 
     .navegacion__menu a {
     font-size: 2.1rem;
+    display: flex;
+    justify-content: center;
 }
 
     .titulos {
@@ -1002,3 +1003,4 @@ background-color: var(--enfasis);
     } */
 
 }
+
