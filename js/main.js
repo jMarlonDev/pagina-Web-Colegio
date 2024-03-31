@@ -33,3 +33,4 @@ document.querySelectorAll(".imagen-contenido img").forEach(imagen=>{
 document.querySelector(".imagen-click").onclick = () =>{
     document.querySelector(".imagen-click").style.display = "none";
 }
+

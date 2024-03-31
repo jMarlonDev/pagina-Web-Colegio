@@ -45,8 +45,8 @@ html {
 }
 
 body {
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(5,71,42,1) 0%, rgba(181,191,161,1) 50%, rgba(5,71,42,1) 100%);
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(5,71,42,1) 0%, rgba(181,191,161,1) 50%, rgba(5,71,42,1) 100%);
 
 }
 
@@ -96,8 +96,7 @@ a {
     flex-direction: column;
     justify-content: start;
 }
-
-
+/* --fin -- */
 
 /* menu para la pagina de inicio */
 .encabezado-main {
@@ -111,6 +110,8 @@ a {
     height: 44rem;
     
 }
+
+/* --- fin ---- */
 
 .bold {
     color: var();
@@ -181,6 +182,7 @@ font-size: 2.8rem;
 
 /* ------------ fin - --------------- */
 
+/* haciendo los estilos para el menu de navegacion */
 .navegacion__menu {
     display: flex;
     justify-content: space-around;
@@ -209,6 +211,8 @@ a.active:after{
     color: #E7E7E7;
 }
 
+/* ------ fin ----- */
+
 /* MediaQuerie para ocultar los iconos en pantallas pequeñas*/
 @media(max-width:768px) {
     .redes-sociales {
@@ -222,6 +226,7 @@ a.active:after{
     display: none;
 }
 
+/* MediaQuerie que tiene los estilos del menu de navegacion para resolucion de pantallas de celular */
 @media screen and (max-width:550px) {
     .abrir-menu {
         background:transparent;
@@ -243,8 +248,6 @@ a.active:after{
     .navegacion {
         opacity: 0;
         visibility: hidden;
-        /* display: grid;
-        grid-template-columns: repeat(2,1fr); */
         gap: 1rem;
         position: absolute;
         top: 0;
@@ -263,7 +266,6 @@ a.active:after{
     }
 
     .navegacion__menu {
-        /* flex-direction: column; */
         display: grid;
         grid-template-columns: repeat(2,1fr);
         margin-top: 3rem;
@@ -295,9 +297,10 @@ a.active:after{
 
 }
 
+/* ------- fin ------- */
 
-/* aqui vamos a trabajar con el main haciendo al galeria de fotos de la pagina de inicio*/
 
+/* aqui vamos a trabajar con el main haciendo la  galeria de fotos de la pagina de inicio */
 .contenido {
     /* Esta es la clase  principal que va a tener todo el contenido de la galeria de fotos*/
     position: relative;
@@ -399,7 +402,7 @@ a.active:after{
 }
 
 
-/* este mediaQuerie hace que las imagenes ocupen el 95% del espacio en
+/* este mediaQuerie hace que las imagenes de la galeria  ocupen el 95% del espacio en
 uan resolucion de pantallas mas pequeñas a 768px */
 @media (max-width:768px) {
     .contenido .imagen-click img {
@@ -407,8 +410,10 @@ uan resolucion de pantallas mas pequeñas a 768px */
     }
 }
 
-/* haciendo los estilos para el pie de pagina o footer */
+/* ----- fin ----- */
 
+
+/* haciendo los estilos para el pie de pagina o footer de la pagina de inicio */
 .sociales-footer {
     display: flex;
     justify-content: center;
@@ -505,6 +510,10 @@ background-color: var(--enfasis);
     font-family: var(--fuenteContenido);
 }
 
+/* ------- fin ------ */
+
+/* MediaQuerie de los estilos para el diseño del footer en resolucion de pantallas pequeñas o celular */
+
 @media screen and (max-width:550px){
     .sociales-footer {
         display: grid;
@@ -567,7 +576,9 @@ background-color: var(--enfasis);
     
 }
 
-/* haciendo los estilos para  la pagina del proposito */
+/* ------ fin ---- */
+
+/* haciendo los estilos para  la pagina del proposito haciendo la mision, vision , lema */
 
 .titulo{
     display: flex;
@@ -650,6 +661,11 @@ background-color: var(--enfasis);
     height: 18rem;
 }
 
+/* ------ fin ----- */
+
+/* MediaQuerie para los estilos de los elementos de la mision , vision , lema
+en resolucion de pantallas pequeñas */
+
 @media screen and (max-width:550px){
     .grid{
         display: flex;
@@ -703,7 +719,9 @@ background-color: var(--enfasis);
         }
 }
 
-/* galeria de fotos con scroll para mostrar la linea de tiempo  de la historia */
+/* ------ fin ------- */
+
+/* galeria de fotos con scroll para mostrar la linea de tiempo  de la historia en la pagina de proposito */
 .titulo2 {
 	display: flex;
 	align-items: center;
@@ -714,6 +732,8 @@ background-color: var(--enfasis);
 	text-transform: uppercase;
 }
 
+/* MediaQuerie haciendo los estilos que va a tener la galeria en resolucion de pantallas para 
+computador */
 @media screen and (min-width:550px){
     .historia{
         padding: 2rem;
@@ -790,31 +810,7 @@ background-color: var(--enfasis);
         top: calc(50% - 14px);
         left: calc(50% - 13px);
     }
-    
-    /* .evento i{
-        content: "";
-        display: block;
-        width: 3rem;
-        height: 3rem;
-        position: absolute;
-        font-size: 4rem;
-        color: var(--blanco);
-        z-index: 2;
-        top: calc(50% - 18px);
-        left: calc(50% - 15px);
-    } */
-    
-    
-    /* .fecha {
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        width: calc(42% + 20px);
-        font-size: 3.2rem;
-        font-weight: normal;
-        color: var(--blanco);
-    }
-     */
+
     .foto {
         background:var(--verdeClaro);
         width: 33%;
@@ -857,6 +853,10 @@ background-color: var(--enfasis);
     }
 }
 
+/* ----- fin ----- */
+
+/* MediaQuerie haciendo los estilos para acomodar el diseño de la galeria de fotos
+en una resolucion de pantalla pequeñas o celular */
 
 @media (max-width:768px){
     .historia{
@@ -903,17 +903,6 @@ background-color: var(--enfasis);
         position: relative;
     }
     
-    /* .contenedor::after {
-        content: "";
-        width: 1rem;
-        height: 100%;
-        background:var(--verdeClaro);
-        position: absolute;
-        top: 0;
-        left: calc(50% - .5rem);
-        z-index: 1;
-    } */
-    
     .evento {
         display: flex;
         margin-right: 4rem;
@@ -921,44 +910,7 @@ background-color: var(--enfasis);
         margin-bottom: 15rem;
         position: relative;
     }
-/*     
-    .evento::after {
-        content: "";
-        display: block;
-        width: 3.4rem;
-        height: 3.4rem;
-        border-radius: 100px;
-        background:var(--blanco);
-        border: 2px solid var(--verdeClaro);
-        position: absolute;
-        z-index: 2;
-        top: calc(50% - 14px);
-        left: calc(50% - 13px);
-    }
-    
-    /* .evento i{
-        content: "";
-        display: block;
-        width: 3rem;
-        height: 3rem;
-        position: absolute;
-        font-size: 4rem;
-        color: var(--blanco);
-        z-index: 2;
-        top: calc(50% - 18px);
-        left: calc(50% - 15px);
-    } */
-    
-/*     
-    .fecha {
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        width: calc(42% + 20px);
-        font-size: 3.2rem;
-        font-weight: normal;
-        color: var(--blanco);
-    } */
+
     
     .foto {
         width: 100%;
@@ -969,38 +921,58 @@ background-color: var(--enfasis);
         margin-left: -1rem;
 
     }
-    
-    /* .foto::after {
-        content: "";
-        display: block;
-        border: 2rem solid transparent;
-        border-left: 2rem solid #fff;
-        position: absolute;
-        right: -5rem;
-        top: calc(50% - 2rem);
 
-    } */
-    
     .foto img {
         width: 100%;
         vertical-align: top;
     }
-/*     
-    .evento:nth-child(even) {
-        flex-direction: row-reverse;
-    } */
-    
-    /* .evento:nth-child(even) .fecha {
-        justify-content: end;
-    } */
-    
-    /* .evento:nth-child(even) .foto::after {
-        content: "";
-        border: 2rem solid transparent;
-        border-right: 2rem solid #fff;
-        right: initial;
-        left: -5rem;
-    } */
+}
 
+/* ----- fin ----- */
+
+/* aquí se van a hacer los estilos para la pagina que muestra la historia completa con paginacion */
+
+.paginacion-historia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.paginacion-historia img{
+    margin-top: 2rem;
+    max-width: 80%;
+    /* height: 50rem; */
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.paginacion-historia .imagen2{
+    max-width: 50%;
+}
+
+.paginacion__texto{
+    margin-top: 2.4rem;
+    margin-left:2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#222;
+    padding: 5rem;
+}
+
+@media  screen and (max-width:600px) {
+    .paginacion__texto{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        text-align: center;
+        padding:2rem;
+        line-height: 3.5rem;
+    }
+
+    .paginacion-historia .imagen2{
+        margin-top: 2rem;
+        max-width: 90%;
+    }
 }
 
