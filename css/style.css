@@ -984,35 +984,110 @@ en una resolucion de pantalla pequeñas o celular */
 
 /* haciendo la parte de sedes */
 .informacion-sede{
+    width: 95%;
+    margin: 1.5rem auto;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    color: var(--blanco);
+    border-radius: 1rem;
     font-family: var(--fuenteTitulo);
     font-weight: bold;
-    font-size: 2rem;
-    background: #024514;
+    font-size: 2rem; 
     padding: 2rem;
-    margin: 0;
-    border:1px solid #024514;
-    border-radius: 1rem;
-}
-.titulo-sede{
-    text-align: center;
+
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid ;
+.titulo-sede{
+    width: 90%;
+    margin:0 auto;
+    text-align: center;
+    padding: 2rem;
+    background:var(--verdeClaro);
+    color: var(--blanco);
+    border-radius: 1rem;
+    text-transform: uppercase;
+}
+
+table{
+    border: 2px solid black;
+    width: 80%;
+    margin: 3rem auto;
+    border-radius: 1.3rem;
+
+}
+
+
+tr{
+    padding: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 1.4rem;
+    
+}
+
+.uno{
+    padding:.5rem;
+    font-size: 2rem;
+    font-family: var(--fuenteContenido);
     display: flex;
-    column-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--verdeClaro)
 }
-th, td {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+
+.dos{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: var(--fuenteContenido);
+    border-bottom: 1px solid var(--verdeClaro)
 }
-td{
-    text-align: center;
+
+/* .informacion-sede2{
+    display: flex;
+    justify-content: center;
+    font-family: var(--fuenteTitulo);
+    background: #222;
+    color: var(--blanco);
+    font-weight: bold;
+    font-size: 2rem; 
+    padding: 2rem;
+    margin: 0;
+} */
+
+
+
+@media screen and (max-width:600px){
+    table{
+        width: 95%;
+    }
+    .informacion-sede{
+        font-size: 2.5rem;
+    }
+    .titulo-sede{
+        width: 95%;
+        font-size: 2rem;
+    }
+    tr{
+        padding: 1.5rem;
+    }
+    .uno{
+        justify-content: start;
+        margin-left: 1rem;
+    }
+    .dos{
+        margin-left: 2.1rem;
+        justify-content:start;
+    }
 }
-th {
-    background-color: #f2f2f2;
-}
+
+
+
+
+
+
+
 
