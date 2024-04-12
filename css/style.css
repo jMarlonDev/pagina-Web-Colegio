@@ -9,19 +9,20 @@
     --fuenteContenido: "Roboto", sans-serif;
     --fuenteTitulo: "Work Sans", sans-serif;
     --verdeClaro: #256b4d;
-    --verde:#0f3102;
-    --grisClaro:#B5BFA1;
-    --enfasis:#eeeeee77;
-    --enfasis2:#eeeeeeee;
+    --verde: #0f3102;
+    --grisClaro: #B5BFA1;
+    --enfasis: #eeeeee77;
+    --enfasis2: #eeeeeeee;
+    --gris: #222;
 }
 
 main {
-background-color: var(--enfasis);
-margin: 5rem;
-border: 1px solid black;
-border-radius: 1.1rem;
-box-shadow: 1px 1px 30px black; 
-width: 90%;
+    background-color: var(--enfasis);
+    margin: 5rem;
+    border: 1px solid black;
+    border-radius: 1.1rem;
+    box-shadow: 1px 1px 30px black;
+    width: 92%;
 }
 
 *,
@@ -45,12 +46,71 @@ html {
 }
 
 body {
-        background: rgb(0,0,0);
-        background: linear-gradient(0deg, rgba(5,71,42,1) 0%, rgba(181,191,161,1) 50%, rgba(5,71,42,1) 100%);
-        /* background: rgb(0,98,28); */
-/* background: linear-gradient(90deg, rgba(0,98,28,1) 11%, rgba(146,247,154,1) 50%, rgba(3,119,45,1) 87%); */
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(5, 71, 42, 1) 0%, rgba(181, 191, 161, 1) 50%, rgba(5, 71, 42, 1) 100%);
+    /* background: rgb(0,98,28); */
+    /* background: linear-gradient(90deg, rgba(0,98,28,1) 11%, rgba(146,247,154,1) 50%, rgba(3,119,45,1) 87%); */
 
 }
+
+/* boton par ala seccion de informacion */
+.button {
+    /* --color: var(--blanco); */
+    padding: 0.8em 1.7em;
+    background-color:var(--verdeClaro);
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 1s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid var(--gris);
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+}
+
+.button::before,
+.button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--gris);
+    transition: 1s ease;
+}
+
+.button::before {
+    top: -1em;
+    left: -1em;
+}
+
+.button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.button:hover::before,
+.button:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.button:hover {
+    /* color: rgb(10, 25, 30); */
+    color: var(--blanco);
+}
+
+.button:active {
+    filter: brightness(.8);
+}
+
 
 p {
     font-family: var(--fuenteContenido);
@@ -98,6 +158,7 @@ a {
     flex-direction: column;
     justify-content: start;
 }
+
 /* --fin -- */
 
 /* menu para la pagina de inicio */
@@ -110,7 +171,7 @@ a {
     background-position: center center;
     justify-content: space-between;
     height: 44rem;
-    
+
 }
 
 /* --- fin ---- */
@@ -132,13 +193,13 @@ a {
     align-items: center;
 }
 
-.encabezado-main > .titulos > h1 {
-display: flex ;
-flex-direction: column;
-font-size: 2.8rem;
+.encabezado-main>.titulos>h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.8rem;
 }
 
-.encabezado-main > .titulos {
+.encabezado-main>.titulos {
     justify-content: space-between;
     align-items: center;
 }
@@ -203,9 +264,8 @@ font-size: 2.8rem;
     transition: 0.4s;
 }
 
-.navegacion__menu a:hover:after 
-,
-a.active:after{
+.navegacion__menu a:hover:after,
+a.active:after {
     width: 100%;
 }
 
@@ -231,7 +291,7 @@ a.active:after{
 /* MediaQuerie que tiene los estilos del menu de navegacion para resolucion de pantallas de celular */
 @media screen and (max-width:550px) {
     .abrir-menu {
-        background:transparent;
+        background: transparent;
         color: var(--blanco);
         display: block;
         border: none;
@@ -260,7 +320,7 @@ a.active:after{
         padding: 2rem;
         bottom: 0;
         width: 100%;
-}
+    }
 
     .navegacion.visible {
         opacity: 1;
@@ -269,19 +329,19 @@ a.active:after{
 
     .navegacion__menu {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         margin-top: 3rem;
         gap: 6rem;
         justify-content: center;
         align-items: center;
         font-size: 3rem;
-}
+    }
 
     .navegacion__menu a {
-    font-size: 2.1rem;
-    display: flex;
-    justify-content: center;
-}
+        font-size: 2.1rem;
+        display: flex;
+        justify-content: center;
+    }
 
     .titulos {
         margin: 0;
@@ -419,7 +479,7 @@ uan resolucion de pantallas mas pequeñas a 768px */
 .sociales-footer {
     display: flex;
     justify-content: center;
-    background:#222;
+    background: #222;
     padding: 1rem;
 }
 
@@ -456,13 +516,14 @@ uan resolucion de pantallas mas pequeñas a 768px */
     column-gap: 1rem;
 }
 
-.bi-c-circle{
+.bi-c-circle {
     font-size: 1.6rem;
     display: flex;
     align-items: center;
 }
+
 .footer {
-background-color: var(--enfasis);
+    background-color: var(--enfasis);
 }
 
 .footer-titulos {
@@ -516,13 +577,13 @@ background-color: var(--enfasis);
 
 /* MediaQuerie de los estilos para el diseño del footer en resolucion de pantallas pequeñas o celular */
 
-@media screen and (max-width:550px){
+@media screen and (max-width:550px) {
     .sociales-footer {
         display: grid;
         grid-template-columns: 50% 50%;
         justify-content: center;
         align-items: center;
-        background:#222;
+        background: #222;
         padding: 2rem;
 
     }
@@ -538,6 +599,7 @@ background-color: var(--enfasis);
         display: flex;
         flex-direction: column;
     }
+
     .footer-titulos img {
         margin-top: 2rem;
         width: 90%;
@@ -551,16 +613,16 @@ background-color: var(--enfasis);
         font-size: 2.4rem;
     }
 
-    .footer-contacto{
+    .footer-contacto {
         margin-bottom: 1.5rem;
         margin-left: 2rem;
     }
 
-    .footer-contacto i{
+    .footer-contacto i {
         margin-right: .5rem;
     }
 
-    .creditos{
+    .creditos {
         padding: 1.5rem;
         display: flex;
         flex-direction: column;
@@ -569,21 +631,21 @@ background-color: var(--enfasis);
         gap: 1rem;
     }
 
-    .creditos p{
+    .creditos p {
         font-size: 2rem;
     }
 
-    .creditos i{
+    .creditos i {
         font-size: 1.8rem;
     }
-    
+
 }
 
 /* ------ fin ---- */
 
 /* haciendo los estilos para  la pagina del proposito haciendo la mision, vision , lema */
 
-.titulo{
+.titulo {
     display: flex;
     justify-content: center;
     font-family: var(--fuenteTitulo);
@@ -592,7 +654,7 @@ background-color: var(--enfasis);
     margin-bottom: 2rem;
 }
 
-.titulo-2{
+.titulo-2 {
     display: flex;
     justify-content: center;
     font-family: var(--fuenteTitulo);
@@ -601,7 +663,7 @@ background-color: var(--enfasis);
     margin-bottom: 2rem;
 }
 
-.titulo-3{
+.titulo-3 {
     display: flex;
     justify-content: center;
     font-family: var(--fuenteTitulo);
@@ -610,7 +672,8 @@ background-color: var(--enfasis);
     margin-bottom: 2rem;
     margin-right: -6rem;
 }
-.contenido-principal{
+
+.contenido-principal {
     position: relative;
     border: 3px solid black;
     width: 49rem;
@@ -621,19 +684,19 @@ background-color: var(--enfasis);
     box-shadow: 3px 5px 20px black;
 }
 
-.grid{
+.grid {
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
-.contenido-imagen{   
+.contenido-imagen {
     position: absolute;
     top: 1%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
-.texto-contenido{
+.texto-contenido {
     margin-top: 4rem;
     position: absolute;
     top: 20%;
@@ -641,25 +704,25 @@ background-color: var(--enfasis);
     text-align: center;
 }
 
-.texto-contenido .texto{
+.texto-contenido .texto {
     font-family: var(--fuenteContenido);
 }
 
-.texto2{
+.texto2 {
     margin-left: 7rem;
 }
 
 
-.contenido-imagen .imagen{
+.contenido-imagen .imagen {
     width: 16rem;
     height: 16rem;
     object-fit: cover;
     border: .3rem solid #fff;
-    box-shadow: 1px 1px 1rem #222; 
+    box-shadow: 1px 1px 1rem #222;
     border-radius: 50%;
 }
 
-@media (min-width:768px){
+@media (min-width:768px) {
     .contenido-imagen .imagen:hover {
         width: 18rem;
         height: 18rem;
@@ -672,17 +735,18 @@ background-color: var(--enfasis);
 /* MediaQuerie para los estilos de los elementos de la mision , vision , lema
 en resolucion de pantallas pequeñas */
 
-@media screen and (max-width:550px){
-    .grid{
+@media screen and (max-width:550px) {
+    .grid {
         display: flex;
         flex-direction: column;
     }
-    .grid-titulos{
-        display:flex;
+
+    .grid-titulos {
+        display: flex;
         flex-direction: column;
     }
 
-    .titulo-1{
+    .titulo-1 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -690,7 +754,7 @@ en resolucion de pantallas pequeñas */
         margin-bottom: 3rem;
     }
 
-    .titulo-3{
+    .titulo-3 {
         display: flex;
         justify-content: center;
         font-family: var(--fuenteTitulo);
@@ -699,8 +763,8 @@ en resolucion de pantallas pequeñas */
         margin-bottom: 2rem;
         margin-right: 1.2rem;
     }
-    
-    .texto2{
+
+    .texto2 {
         margin: 0 auto;
     }
 
@@ -708,7 +772,7 @@ en resolucion de pantallas pequeñas */
         display: flex;
         justify-content: center;
     }
-    
+
 
     main {
         background-color: var(--enfasis);
@@ -717,60 +781,61 @@ en resolucion de pantallas pequeñas */
         border-radius: 1.1rem;
         box-shadow: 1px 1px 30px black;
         width: 100%;
-        }
+    }
 
-        .contenido-principal{
-            width: 90%;
-            height: 75vh;
-        }
+    .contenido-principal {
+        width: 90%;
+        height: 75vh;
+    }
 }
 
 /* ------ fin ------- */
 
 /* galeria de fotos con scroll para mostrar la linea de tiempo  de la historia en la pagina de proposito */
 .titulo2 {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 30vh;
-	font-size: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh;
+    font-size: 3.5rem;
     color: var(--blanco);
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 /* MediaQuerie haciendo los estilos que va a tener la galeria en resolucion de pantallas para 
 computador */
-@media screen and (min-width:550px){
-    .historia{
+@media screen and (min-width:550px) {
+    .historia {
         padding: 2rem;
-        color: var(--blanco); 
+        color: var(--blanco);
         font-family: var(--fuenteContenido);
         font-size: 1.6rem;
         border-radius: 1rem;
     }
 
-    .leer-mas{
+    .leer-mas {
         display: block;
         font-size: 1.6rem;
     }
-    .fecha{
+
+    .fecha {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 1.3rem;
-        background:#222;
+        background: #222;
         font-family: var(--fuenteContenido);
         color: var(--blanco);
         font-size: 1.4rem;
     }
 
-    .fecha2{
+    .fecha2 {
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 1.3rem;
         font-family: var(--fuenteContenido);
-        background:#222;
+        background: #222;
         color: var(--blanco);
         font-size: 1.5rem;
     }
@@ -783,18 +848,18 @@ computador */
         flex-direction: column;
         position: relative;
     }
-    
+
     .contenedor::after {
         content: "";
         width: .5rem;
         height: 100%;
-        background:var(--verdeClaro) ;
+        background: var(--verdeClaro);
         position: absolute;
         top: 0;
         left: calc(50% - .5rem);
         z-index: 1;
     }
-    
+
     .evento {
         display: flex;
         margin-right: 1rem;
@@ -802,14 +867,14 @@ computador */
         margin-bottom: 5rem;
         position: relative;
     }
-    
+
     .evento::after {
         content: "";
         display: block;
         width: 3.4rem;
         height: 3.4rem;
         border-radius: 100px;
-        background:var(--blanco);
+        background: var(--blanco);
         border: 2px solid var(--verdeClaro);
         position: absolute;
         z-index: 2;
@@ -818,7 +883,7 @@ computador */
     }
 
     .foto {
-        background:#222;
+        background: #222;
         width: 33%;
         border: 1rem solid #fff;
         border-radius: 1.5rem;
@@ -826,7 +891,7 @@ computador */
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         margin-right: 2rem;
     }
-    
+
     .foto::after {
         content: "";
         display: block;
@@ -836,20 +901,20 @@ computador */
         right: -5rem;
         top: calc(50% - 2rem);
     }
-    
+
     .foto img {
         width: 100%;
-        vertical-align: top; 
+        vertical-align: top;
     }
-    
+
     .evento:nth-child(even) {
         flex-direction: row-reverse;
     }
-    
+
     .evento:nth-child(even) .fecha {
         justify-content: end;
     }
-    
+
     .evento:nth-child(even) .foto::after {
         content: "";
         border: 2rem solid transparent;
@@ -864,32 +929,33 @@ computador */
 /* MediaQuerie haciendo los estilos para acomodar el diseño de la galeria de fotos
 en una resolucion de pantalla pequeñas o celular */
 
-@media (max-width:768px){
-    .historia{
+@media (max-width:768px) {
+    .historia {
         padding: 3rem;
-        color: var(--blanco); 
+        color: var(--blanco);
         font-family: var(--fuenteContenido);
     }
 
-    .foto{
-        background:var(--verdeClaro);
+    .foto {
+        background: var(--verdeClaro);
     }
 
-    .leer-mas{
+    .leer-mas {
         display: block;
     }
-    .fecha{
+
+    .fecha {
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 1.4rem;
-        background:#222;
+        background: #222;
         color: var(--blanco);
         font-size: 2rem;
         font-family: var(--fuenteContenido);
     }
 
-    .fecha2{
+    .fecha2 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -897,7 +963,7 @@ en una resolucion de pantalla pequeñas o celular */
         font-family: var(--fuenteContenido);
         color: var(--blanco);
         font-size: 2rem;
-        background:#222;
+        background: #222;
     }
 
     .contenedor {
@@ -908,7 +974,7 @@ en una resolucion de pantalla pequeñas o celular */
         flex-direction: column;
         position: relative;
     }
-    
+
     .evento {
         display: flex;
         margin-right: 4rem;
@@ -917,7 +983,7 @@ en una resolucion de pantalla pequeñas o celular */
         position: relative;
     }
 
-    
+
     .foto {
         width: 100%;
         border: 1rem solid #fff;
@@ -938,14 +1004,14 @@ en una resolucion de pantalla pequeñas o celular */
 
 /* aquí se van a hacer los estilos para la pagina que muestra la historia completa con paginacion */
 
-.paginacion-historia{
+.paginacion-historia {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
 }
 
-.paginacion-historia img{
+.paginacion-historia img {
     margin-top: 2rem;
     max-width: 80%;
     /* height: 50rem; */
@@ -953,37 +1019,37 @@ en una resolucion de pantalla pequeñas o celular */
     border-radius: 1rem;
 }
 
-.paginacion-historia .imagen2{
+.paginacion-historia .imagen2 {
     max-width: 50%;
 }
 
-.paginacion__texto{
+.paginacion__texto {
     margin-top: 2.4rem;
-    margin-left:2rem;
+    margin-left: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    color:#222;
+    color: #222;
     padding: 5rem;
 }
 
-@media  screen and (max-width:600px) {
-    .paginacion__texto{
+@media screen and (max-width:600px) {
+    .paginacion__texto {
         margin-top: 5rem;
         margin-bottom: 5rem;
         text-align: center;
-        padding:2rem;
+        padding: 2rem;
         line-height: 3.5rem;
     }
 
-    .paginacion-historia .imagen2{
+    .paginacion-historia .imagen2 {
         margin-top: 2rem;
         max-width: 90%;
     }
 }
 
-/* haciendo la parte de sedes */
-.informacion-sede{
+/* haciendo la pagina que va a contener la informacion  de todas las  sedes */
+.informacion-sede {
     width: 95%;
     margin: 1.5rem auto;
     margin-top: 10rem;
@@ -995,23 +1061,23 @@ en una resolucion de pantalla pequeñas o celular */
     border-radius: 1rem;
     font-family: var(--fuenteTitulo);
     font-weight: bold;
-    font-size: 2rem; 
+    font-size: 2rem;
     padding: 2rem;
 
 }
 
-.titulo-sede{
+.titulo-sede {
     width: 90%;
-    margin:0 auto;
+    margin: 0 auto;
     text-align: center;
     padding: 2rem;
-    background:var(--verdeClaro);
+    background: var(--verdeClaro);
     color: var(--blanco);
     border-radius: 1rem;
     text-transform: uppercase;
 }
 
-table{
+table {
     border: 2px solid black;
     width: 80%;
     margin: 3rem auto;
@@ -1020,16 +1086,16 @@ table{
 }
 
 
-tr{
+tr {
     padding: 1.2rem;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin-bottom: 1.4rem;
-    
+
 }
 
-.uno{
-    padding:.5rem;
+.uno {
+    padding: .5rem;
     font-size: 2rem;
     font-family: var(--fuenteContenido);
     font-weight: 700;
@@ -1039,7 +1105,7 @@ tr{
     border-bottom: 1px solid var(--verdeClaro)
 }
 
-.dos{
+.dos {
     display: flex;
     justify-content: center;
     font-size: 2rem;
@@ -1048,49 +1114,89 @@ tr{
 
 }
 
-/* .informacion-sede2{
-    display: flex;
-    justify-content: center;
-    font-family: var(--fuenteTitulo);
-    background: #222;
-    color: var(--blanco);
-    font-weight: bold;
-    font-size: 2rem; 
-    padding: 2rem;
-    margin: 0;
-} */
+/*  ------ fin ------ */
 
-
-
-@media screen and (max-width:600px){
-    table{
+/* MediaQuerie para organizar los estilos de la pagina
+de sedes en pantallas que tienen una resolucion de 
+pantalla pequeña celulares */
+@media screen and (max-width:600px) {
+    table {
         width: 95%;
     }
-    .informacion-sede{
+
+    .informacion-sede {
         font-size: 2.5rem;
     }
-    .titulo-sede{
+
+    .titulo-sede {
         width: 95%;
         font-size: 2rem;
     }
-    tr{
+
+    tr {
         padding: 1.5rem;
     }
-    .uno{
+
+    .uno {
         justify-content: start;
         margin-left: 1rem;
     }
-    .dos{
+
+    .dos {
         margin-left: 2.1rem;
-        justify-content:start;
+        justify-content: start;
         font-family: var(--fuenteContenido);
     }
 }
 
+/* haciendo los estilos para la seccion de informacion */
+.contenido-pei {
+    margin-left: 30rem;
+}
 
+.titulo-info{
+    font-family: var(--fuenteTitulo);
+    font-weight: bold;
+    font-size: 4rem;
+    color: #222;
+}
 
+.centrar-content{
+    margin-left: 20rem;
+}
 
+.titulo-info2{
+    background:var(--verdeClaro);
+    color: var(--blanco);
+    font-family: var(--fuenteTitulo);
+    font-size: 2rem;
+    margin: 6rem auto;
+    text-align: center;
+    border: 1px solid var(--verdeClaro);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 80%;
+}
 
+.navegacion-info ul{
+    display:flex;
+    justify-content:space-around;
+}
 
+.navegacion__menu-info{
+    list-style: none;
+    display: flex;
+    margin: 4rem 0 ;
+}
 
+.navegacion__menu-info a{
+    font-family: var(--fuenteContenido);
+    padding: .7rem;
+    font-weight: bold;
+    color: var(--gris);
+}
 
+.navegacion__menu-info a:hover{
+    color: var(--blanco);
+    border-bottom: 2px solid var(--blanco);
+}
