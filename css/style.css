@@ -1166,17 +1166,61 @@ pantalla pequeña celulares */
 }
 
 .titulo-info2{
+    box-shadow: 1px 3px 8px black;
     background:var(--verdeClaro);
     color: var(--blanco);
     font-family: var(--fuenteTitulo);
     font-size: 2rem;
-    margin: 6rem auto;
-    text-align: center;
+    margin: 5rem 15rem;
+    text-align: center; 
+    text-transform: uppercase;
     border: 1px solid var(--verdeClaro);
     border-radius: 1rem;
     padding: 1.5rem;
     width: 80%;
 }
+
+.subtitulo-info3{
+    text-align: center;
+    font-family: var(--fuenteContenido);
+    font-size: 2rem;
+}
+
+.separacion{
+    margin-top: 2rem;
+}
+
+.subtitulo-bold{
+    font-family: var(--fuenteContenido);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--gris);
+    font-size: 1.8rem
+}
+.subtitulo-bold2{
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    font-family: var(--fuenteContenido);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--gris);
+    font-size: 1.8rem;
+} 
+
+.texto-info{
+    font-family: var(--fuenteContenido);
+    font-weight: 500;
+    margin: 1rem auto;
+    width: 90%;
+}
+
+.texto-info2{
+    margin:2rem auto;
+    text-align: center;
+}
+
 
 .navegacion-info ul{
     display:flex;
@@ -1186,7 +1230,7 @@ pantalla pequeña celulares */
 .navegacion__menu-info{
     list-style: none;
     display: flex;
-    margin: 4rem 0 ;
+    margin: 13rem 0 ;
 }
 
 .navegacion__menu-info a{
@@ -1197,6 +1241,49 @@ pantalla pequeña celulares */
 }
 
 .navegacion__menu-info a:hover{
-    color: var(--blanco);
-    border-bottom: 2px solid var(--blanco);
+    color: var(--verdeClaro);
+    border-bottom: 2px solid var(--verdeClaro);
+}
+
+/* media querie para ajustar el estilo de la pagina de informacion
+a dis`positivos moviles */
+@media  screen and (max-width: 600px) {
+    .button{
+        width: 90%;
+    }
+    .titulo-info{
+        color: red;
+        text-align: center;
+    }
+
+    .titulo-info2{
+        margin: 8rem auto;
+        width: 95%;
+    }
+
+    .contenido-pei{
+        margin: auto;
+        width: 95%;
+    }
+    .centrar-content{
+        margin: 0 1rem;
+    }
+    .navegacion-info ul{
+        background:var(--verdeClaro);
+        border: 1px solid var(--verdeClaro);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .navegacion__menu-info a{
+        color: var(--blanco);
+    }
+
+    .navegacion__menu-info a:hover{
+        color:var(--blanco);
+        border-bottom: 2px solid var(--blanco);
+    }
 }
