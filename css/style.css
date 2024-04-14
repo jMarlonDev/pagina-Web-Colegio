@@ -665,8 +665,10 @@ h3{
     max-width: 50%;
 
 }
-.titulo {
+
+.titulo{
     display: flex;
+    color: var(--gris);
     justify-content: center;
     font-family: var(--fuenteTitulo);
     font-size: 2.5rem;
@@ -681,6 +683,7 @@ h3{
     font-size: 2.5rem;
     text-transform: uppercase;
     margin-bottom: 2rem;
+    color: var(--gris);
 }
 
 .titulo-3 {
@@ -757,6 +760,17 @@ h3{
 en resolucion de pantallas pequeñas */
 
 @media screen and (max-width:550px) {
+    h3{
+        top: -1.3rem;
+        text-align: center;
+        font-size: 2.8rem;
+    }
+    .fondo-titulo{
+        position: absolute;
+        max-width: 97%;
+
+    
+}
     .grid {
         display: flex;
         flex-direction: column;
@@ -827,6 +841,7 @@ en resolucion de pantallas pequeñas */
 /* MediaQuerie haciendo los estilos que va a tener la galeria en resolucion de pantallas para 
 computador */
 @media screen and (min-width:550px) {
+
     .historia {
         padding: 1rem;
         color: var(--blanco);
@@ -963,7 +978,7 @@ en una resolucion de pantalla pequeñas o celular */
     }
 
     .foto {
-        background: var(--verdeClaro);
+        background: var(--gris);
     }
 
     .leer-mas {
@@ -971,6 +986,7 @@ en una resolucion de pantalla pequeñas o celular */
     }
 
     .fecha {
+        margin-top: 3rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1075,9 +1091,9 @@ en una resolucion de pantalla pequeñas o celular */
 }
 
 /* haciendo la pagina que va a contener la informacion  de todas las  sedes */
-.informacion-sede {
-    margin: 1.5rem auto;
-    margin-top: 10rem;
+/* .informacion-sede {
+    max-width: 92%;
+    margin: 7rem auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1089,9 +1105,9 @@ en una resolucion de pantalla pequeñas o celular */
     font-size: 2rem;
     padding: 2rem;
 
-}
+} */
 
-.titulo-sede {
+/* .titulo-sede {
     margin: 0 auto;
     text-align: center;
     padding: 2rem;
@@ -1099,47 +1115,79 @@ en una resolucion de pantalla pequeñas o celular */
     color: var(--blanco);
     border-radius: 1rem;
     text-transform: uppercase;
+} */
+
+table{
+    width:max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: space-between;
+
 }
 
-table {
-    text-align: start;
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.container_tablas{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr)
+   
+}
 .contenido-importante {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
     position: relative;
-    width: 20%;
     border-radius: 14px;
     background-color: var(--enfasis2);
     box-shadow: 3px 5px 20px black;
+    max-width:55rem ;
+    height: 30rem;
 }
 
 .tabla-title {
     text-align: center;
     font-family: var(--fuenteTitulo);
-    font-size: 3rem;
+    font-size: 2rem;
     background-color: var(--verde);
     border-radius: 14px 14px 0 0;
     padding: 1rem;
     color: white;
+    width: 100%;
 }
 
 
-tr {
-    padding: 1.2rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 1.4rem;
+.uno{
+    font-size: 2rem;
+    font-family: var(--fuenteContenido);
+    font-weight: bold;
+    color: var(--gris);
 
 }
 
-.uno {
+.dos{
+    
+    text-align: end;
+    font-size: 2rem;
+    font-family: var(--fuenteContenido);
+}
+
+
+
+/* .uno {
+
     padding: .5rem;
     font-size: 2rem;
     font-family: var(--fuenteContenido);
     font-weight: 700;
     display: flex;
-    justify-content: start;
-    align-items: center;
+    justify-content:start;
     border-bottom: 1px solid var(--verdeClaro)
 }
 
@@ -1150,7 +1198,7 @@ tr {
     font-family: var(--fuenteContenido);
     border-bottom: 1px solid var(--verdeClaro);
 
-}
+} */
 
 /*  ------ fin ------ */
 
@@ -1158,31 +1206,37 @@ tr {
 de sedes en pantallas que tienen una resolucion de 
 pantalla pequeña celulares */
 @media screen and (max-width:600px) {
-    table {
+    .contenido-importante{
         width: 95%;
+    }
+    tr{
+        border: none;
+    }
+    table {
+        width: 98%;
     }
 
     .informacion-sede {
         font-size: 2.5rem;
+        margin-bottom: 5rem;
     }
 
-    .titulo-sede {
-        width: 95%;
-        font-size: 2rem;
-    }
-
-    tr {
-        padding: 1.5rem;
+    .tabla-title {
+        width: 100%;
+        font-size: 2.3rem;
+        padding: 2.1rem;
     }
 
     .uno {
-        justify-content: start;
-        margin-left: 1rem;
+        font-size: 2.2rem;
+        margin: 1rem 1rem;
+        display: flex;
+        justify-content:start;
     }
 
     .dos {
-        margin-left: 2.1rem;
-        justify-content: start;
+        font-size: 2.2rem;
+        margin-left: 6rem;
         font-family: var(--fuenteContenido);
     }
 }
