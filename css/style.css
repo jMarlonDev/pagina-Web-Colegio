@@ -40,6 +40,7 @@ main,
 
 
 html {
+    scroll-behavior:smooth;
     font-size: 62.5%;
     max-width: 100%;
     margin: 0;
@@ -54,11 +55,39 @@ body {
 
 }
 
-/* boton par ala seccion de informacion */
+/* icono de check para la seccion de infomacion */
+.bi-check2-square{
+    font-size: 2.4rem;
+    color: var(--blanco);
+}
+
+/* icono de numeros para la seccion de informacion */
+.bi-1-square-fill{
+    color: var(--blanco);
+    font-size: 2.3rem;
+    padding: 1rem;
+}
+
+.bi-2-square-fill{
+    color: var(--blanco);
+    font-size: 2.3rem;
+    padding: 1rem;
+}
+
+.bi-3-square-fill{
+    color: var(--blanco);
+    font-size: 2.3rem;
+    padding: 1rem;
+}
+
+/* -------- */
+
+
+/* boton para la seccion de informacion */
 .button {
     /* --color: var(--blanco); */
     padding: 0.8em 1.7em;
-    background-color: var(--verdeClaro);
+    background-color: var(--gris);
     border-radius: .3em;
     position: relative;
     overflow: hidden;
@@ -83,7 +112,7 @@ body {
     position: absolute;
     border-radius: 50%;
     z-index: -1;
-    background-color: var(--gris);
+    background-color: var(--verdeClaro);
     transition: 1s ease;
 }
 
@@ -354,10 +383,14 @@ a.active:after {
     .titulos {
         margin: 0;
         width: 100%;
-        /* background: var(--verdeClaro); */
-        display: flex;
-        align-items: center;
         padding: 2rem;
+    }
+    h1{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: center;
     }
 
     .segundo-titulo {
@@ -1234,14 +1267,25 @@ pantalla pequeña celulares */
     width: 80%;
 }
 
+.separacion{
+    padding-bottom: 7rem;
+}
 .subtitulo-info3 {
     text-align: center;
     font-family: var(--fuenteContenido);
     font-size: 2rem;
+    color: var(--verde);
 }
 
-.separacion {
-    margin-top: 2rem;
+
+.titulo-span{
+    font-size: 2.2rem;
+    font-family: var(--fuenteTitulo);
+    font-weight: bold;
+    color: var(--verde);
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
 }
 
 .subtitulo-bold {
@@ -1249,7 +1293,7 @@ pantalla pequeña celulares */
     font-weight: bold;
     text-transform: uppercase;
     color: var(--gris);
-    font-size: 1.8rem
+    font-size: 2rem;
 }
 
 .subtitulo-bold2 {
@@ -1260,32 +1304,44 @@ pantalla pequeña celulares */
     font-family: var(--fuenteContenido);
     font-weight: bold;
     text-transform: uppercase;
-    color: var(--gris);
+    color: var(--verde);
     font-size: 1.8rem;
 }
 
 .texto-info {
     font-family: var(--fuenteContenido);
     font-weight: 500;
+    color: var(--gris);
     margin: 1rem auto;
     width: 90%;
 }
 
 .texto-info2 {
-    margin: 2rem auto;
+    font-size: 2.1rem;
+    font-weight: 500;
     text-align: center;
+    color: var(--gris);
+    padding: 1rem;
 }
 
 
 .navegacion-info ul {
     display: flex;
+
     justify-content: space-around;
+    align-items: center;
+
 }
 
 .navegacion__menu-info {
     list-style: none;
     display: flex;
-    margin: 13rem 0;
+    padding:3.4rem;
+    background: var(--blanco);
+}
+
+section [id]{
+    scroll-margin-top: 2rem;
 }
 
 .navegacion__menu-info a {
@@ -1295,9 +1351,45 @@ pantalla pequeña celulares */
     color: var(--gris);
 }
 
+.gobierno-escolar{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2.3rem;
+}
+
+.imagen-escolar{
+    border-radius: 1rem;
+}
+
+
 .navegacion__menu-info a:hover {
     color: var(--verdeClaro);
     border-bottom: 2px solid var(--verdeClaro);
+}
+
+/* centrar el contenido del boton de la seccion de informacion para el proyecto de labor social */
+.centrar-boton{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+/* -------------- */
+
+/* ajustando el icono de la seccion de informacion parte proyecto de labor social */
+.bi-caret-right-fill{
+    color: var(--verde);
+    font-size: 2.4rem;
+}
+/* --------- */
+
+/* ajustando el tamaño y la posicion del segundo icono de la seccion de informacion
+en la parte de proyecto de labor social */
+
+.bi-caret-down-fill{
+    display: flex;
+    justify-content: center;
+    font-size: 3.2rem;
+    color: var(--verde);
 }
 
 /* media querie para ajustar el estilo de la pagina de informacion
@@ -1307,8 +1399,28 @@ a dis`positivos moviles */
         width: 90%;
     }
 
+    .titulo-span{
+        text-align: center;
+    }
+
+    .subtitulo-bold2{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .texto-info2{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .texto-info{
+        font-size: 2.3rem;
+        line-height: 3.3rem;
+        text-align: center;
+    }
+
+
     .titulo-info {
-        color: red;
+        color:var(--gris);
         text-align: center;
     }
 
@@ -1323,7 +1435,12 @@ a dis`positivos moviles */
     }
 
     .centrar-content {
-        margin: 0 1rem;
+        margin: 0 auto;
+    }
+
+    .centrar-boton{
+        margin: 0 auto;
+        width: 90%;
     }
 
     .navegacion-info ul {
@@ -1343,5 +1460,11 @@ a dis`positivos moviles */
     .navegacion__menu-info a:hover {
         color: var(--blanco);
         border-bottom: 2px solid var(--blanco);
+    }
+
+    .imagen-escolar{
+        max-width: 95%;
+        border-radius: 1rem;
+        border: 1rem solid var(--verdeClaro);
     }
 }
