@@ -981,6 +981,7 @@ computador */
         padding: 0;
         max-width: 100%;
         vertical-align: top;
+        
     }
 
     .evento:nth-child(even) {
@@ -1094,6 +1095,7 @@ en una resolucion de pantalla pequeñas o celular */
     /* height: 50rem; */
     object-fit: cover;
     border-radius: 1rem;
+    border: 1.3rem solid var(--blanco);
 }
 
 .paginacion-historia .imagen2 {
@@ -1108,6 +1110,11 @@ en una resolucion de pantalla pequeñas o celular */
     align-items: center;
     color: #222;
     padding: 5rem;
+}
+
+.historia-negrita{
+    font-weight: bold;
+    color: #000;
 }
 
 @media screen and (max-width:600px) {
