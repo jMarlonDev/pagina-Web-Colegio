@@ -10,5 +10,7 @@ Tener un solo margin para todo CORREGIR EL MARGIN
 Agregar un parrafo de ¿Por qué deberian matricular a los jovenes en el General Santander?
 
 Cosas que se pueden poner en inicio:
-Matriculas, fechas de los icfes, fechas de pruebas saber, fechas de inscripciones, programas que comparte el colegio, el sena, cursos y programas vinculados, noticias de verdad
+Matriculas, fechas de los icfes, fechas de pruebas saber, fechas de inscripciones, programas que comparte el colegio, el sena, cursos y programas vinculados, noticias de verdad, fechas de grados, precio del derecho de grado, fotoestudio, que se necesita
+
+TITULOS LA PRIMERA VA MAYUSCULA
 
