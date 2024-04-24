@@ -11,10 +11,11 @@
     --verdeClaro: #05400A;
     --verde: #1B6E2A;
     --grisClaro: #B5BFA1;
-    --enfasis: #eeeeee77;
+    --enfasis: #B5BFA1;
     --enfasis2: #eeeeeeee;
     --gris: #222;
 }
+
 
 main,
 .seccion {
@@ -40,7 +41,7 @@ main,
 
 
 html {
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
     font-size: 62.5%;
     max-width: 100%;
     margin: 0;
@@ -48,33 +49,34 @@ html {
 }
 
 body {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, var(--verdeClaro) 0%, var(--verde) 100%);
+    background-color: #fff;
+    /* background: rgb(0, 0, 0); */
+    /* background: linear-gradient(90deg, var(--verdeClaro) 0%, var(--verde) 100%); */
     /* background: rgb(0,98,28); */
     /* background: linear-gradient(90deg, rgba(0,98,28,1) 11%, rgba(146,247,154,1) 50%, rgba(3,119,45,1) 87%); */
 
 }
 
 /* icono de check para la seccion de infomacion */
-.bi-check2-square{
+.bi-check2-square {
     font-size: 2.4rem;
     color: var(--blanco);
 }
 
 /* icono de numeros para la seccion de informacion */
-.bi-1-square-fill{
+.bi-1-square-fill {
     color: var(--blanco);
     font-size: 2.3rem;
     padding: 1rem;
 }
 
-.bi-2-square-fill{
+.bi-2-square-fill {
     color: var(--blanco);
     font-size: 2.3rem;
     padding: 1rem;
 }
 
-.bi-3-square-fill{
+.bi-3-square-fill {
     color: var(--blanco);
     font-size: 2.3rem;
     padding: 1rem;
@@ -385,7 +387,8 @@ a.active:after {
         width: 100%;
         padding: 2rem;
     }
-    h1{
+
+    h1 {
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -564,8 +567,21 @@ uan resolucion de pantallas mas pequeñas a 768px */
 }
 
 .footer {
-    background-color: var(--enfasis);
+    background-image: url(../imagenes/imagenColegio2_o.jpg);
+    background-color: rgb(66, 66, 66);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+
+    background-position: bottom;
+    background-size: cover;
+
+
 }
+
+.container {
+    z-index: 99999;
+}
+
 
 .footer-titulos {
     display: flex;
@@ -981,7 +997,7 @@ computador */
         padding: 0;
         max-width: 100%;
         vertical-align: top;
-        
+
     }
 
     .evento:nth-child(even) {
@@ -1112,7 +1128,7 @@ en una resolucion de pantalla pequeñas o celular */
     padding: 5rem;
 }
 
-.historia-negrita{
+.historia-negrita {
     font-weight: bold;
     color: #000;
 }
@@ -1138,7 +1154,7 @@ en una resolucion de pantalla pequeñas o celular */
     width: 100%;
 }
 
-td{
+td {
     border-bottom: 2px solid var(--verdeClaro);
 }
 
@@ -1182,12 +1198,13 @@ td{
 }
 
 /* esta es una utilidad para quitar el ultimo borde de las tablas solamente */
-.sin-borde{
+.sin-borde {
     border: none;
 }
+
 /* ------ */
 
-.uno{
+.uno {
     font-size: 2rem;
     font-family: var(--fuenteContenido);
     font-weight: bold;
@@ -1207,20 +1224,21 @@ td{
 de sedes en pantallas que tienen una resolucion de 
 pantalla pequeña celulares */
 @media screen and (max-width:600px) {
-    td{
+    td {
         border: none;
     }
-    .container_tablas{
+
+    .container_tablas {
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 10rem;
     }
 
-    .contenido-importante{
+    .contenido-importante {
         margin-top: 3.4rem;
         width: 100%;
-        height:100%;
+        height: 100%;
     }
 
     .tabla-title {
@@ -1230,9 +1248,9 @@ pantalla pequeña celulares */
     }
 
     .uno {
-        padding:1.3rem;
+        padding: 1.3rem;
         font-size: 2.2rem;
-        display: flex; 
+        display: flex;
         justify-content: start;
     }
 
@@ -1276,9 +1294,10 @@ pantalla pequeña celulares */
     width: 80%;
 }
 
-.separacion{
+.separacion {
     padding-bottom: 7rem;
 }
+
 .subtitulo-info3 {
     text-align: center;
     font-family: var(--fuenteContenido);
@@ -1287,7 +1306,7 @@ pantalla pequeña celulares */
 }
 
 
-.titulo-span{
+.titulo-span {
     font-size: 2.2rem;
     font-family: var(--fuenteTitulo);
     font-weight: bold;
@@ -1345,11 +1364,11 @@ pantalla pequeña celulares */
 .navegacion__menu-info {
     list-style: none;
     display: flex;
-    padding:3.4rem;
+    padding: 3.4rem;
     background: var(--blanco);
 }
 
-section [id]{
+section [id] {
     scroll-margin-top: 2rem;
 }
 
@@ -1360,13 +1379,13 @@ section [id]{
     color: var(--gris);
 }
 
-.gobierno-escolar{
+.gobierno-escolar {
     display: flex;
     justify-content: center;
     padding-bottom: 2.3rem;
 }
 
-.imagen-escolar{
+.imagen-escolar {
     border-radius: 1rem;
     border: 1.2rem solid #000;
 }
@@ -1378,24 +1397,26 @@ section [id]{
 }
 
 /* centrar el contenido del boton de la seccion de informacion para el proyecto de labor social */
-.centrar-boton{
+.centrar-boton {
     display: flex;
     justify-content: center;
     margin: 0 auto;
 }
+
 /* -------------- */
 
 /* ajustando el icono de la seccion de informacion parte proyecto de labor social */
-.bi-caret-right-fill{
+.bi-caret-right-fill {
     color: var(--verde);
     font-size: 2.4rem;
 }
+
 /* --------- */
 
 /* ajustando el tamaño y la posicion del segundo icono de la seccion de informacion
 en la parte de proyecto de labor social */
 
-.bi-caret-down-fill{
+.bi-caret-down-fill {
     display: flex;
     justify-content: center;
     font-size: 3.2rem;
@@ -1409,20 +1430,21 @@ a dis`positivos moviles */
         width: 90%;
     }
 
-    .titulo-span{
+    .titulo-span {
         text-align: center;
     }
 
-    .subtitulo-bold2{
+    .subtitulo-bold2 {
         font-size: 2rem;
         text-align: center;
     }
-    .texto-info2{
+
+    .texto-info2 {
         font-size: 2.2rem;
         text-align: center;
     }
 
-    .texto-info{
+    .texto-info {
         font-size: 2.3rem;
         line-height: 3.3rem;
         text-align: center;
@@ -1430,7 +1452,7 @@ a dis`positivos moviles */
 
 
     .titulo-info {
-        color:var(--gris);
+        color: var(--gris);
         text-align: center;
     }
 
@@ -1448,7 +1470,7 @@ a dis`positivos moviles */
         margin: 0 auto;
     }
 
-    .centrar-boton{
+    .centrar-boton {
         margin: 0 auto;
         width: 90%;
     }
@@ -1472,9 +1494,13 @@ a dis`positivos moviles */
         border-bottom: 2px solid var(--blanco);
     }
 
-    .imagen-escolar{
+    .imagen-escolar {
         max-width: 95%;
         border-radius: 1rem;
         border: 1rem solid var(--verdeClaro);
     }
+}
+
+p {
+    text-align: justify;
 }
